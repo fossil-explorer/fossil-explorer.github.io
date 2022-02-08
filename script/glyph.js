@@ -205,6 +205,8 @@ function loadImgs(div, data, event) {
                         .style('display', 'block')
                         .style('transform', `translate(${0}px, ${0}px)`)
                         .style("z-index", 5000)
+                        .style('width', `${$('#mainview').width() / 2}px`)
+                        .style('height', `${$('#mainview').height()}px`)
                         .select('img')
                         .attr('src', `images/graptolites/${d['fig_name']}`);
                 })

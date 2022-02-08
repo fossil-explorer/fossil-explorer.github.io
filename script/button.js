@@ -62,11 +62,15 @@ d3.select('#imageWindow .drag')
                     dragx = event.sourceEvent.clientX;
                     dragy = event.sourceEvent.clientY;
 
-                d3.select('#imageWindow').style('transform', `translate(${x - dx}px, ${y - dy}px)`);
+                d3.select('#fsimg')
+                    .style('z-index', 5000);
+                d3.select('#imageWindow')
+                    .style('z-index', 5001)
+                    .style('transform', `translate(${x - dx}px, ${y - dy}px)`);
             })
     );
 
-d3.select('#fsimg .drag')
+d3.select('#fsimg')
     .call(
         d3.drag()
             .on('start', function (event) {
@@ -81,6 +85,10 @@ d3.select('#fsimg .drag')
                     dragx = event.sourceEvent.clientX;
                     dragy = event.sourceEvent.clientY;
 
-                d3.select('#fsimg').style('transform', `translate(${x - dx}px, ${y - dy}px)`);
+                d3.select('#imageWindow')
+                    .style('z-index', 5000)
+                d3.select('#fsimg')
+                    .style('z-index', 5001)
+                    .style('transform', `translate(${x - dx}px, ${y - dy}px)`);
             })
     );
