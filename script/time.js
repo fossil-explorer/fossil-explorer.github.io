@@ -73,9 +73,9 @@ function drawTree(data, tree_g, width, height) {
     let text = cell.append("text")
         // https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting
         .style('user-select', 'none')
-        .attr('font-size', '12px')
+        .attr('font-size', '10px')
         .attr('font-weight', 'bold')
-        .attr('x', 5)
+        .attr('x', 2)
         // .attr("x", d => (d.x1 - d.x0) / 2 - 35)
         .attr("y", 13)
         .style('cursor', 'pointer')
@@ -87,9 +87,9 @@ function drawTree(data, tree_g, width, height) {
     let numText = cell.append("text")
         // https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting
         .style('user-select', 'none')
-        .attr('font-size', '10px')
+        .attr('font-size', '8px')
         .attr('font-weight', 'bold')
-        .attr('x', 5)
+        .attr('x', 2)
         // .attr("x", d => (d.x1 - d.x0) / 2 - 35)
         .attr("y", 23)
         .style('cursor', 'pointer')
