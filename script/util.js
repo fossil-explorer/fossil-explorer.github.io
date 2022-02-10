@@ -1,6 +1,6 @@
 function filterByBrushToProject(data, selection, svg, map) {
     let filterData = data.filter(d => selection[1] <= +d.age_to && +d.age_from <= selection[0]);
-    projectData(filterData, svg, map);
+    projectMapData(filterData, svg, map);
 }
 
 function filterByClickTreeToProject(data, age, node_g, map) {
