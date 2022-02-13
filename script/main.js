@@ -7,15 +7,15 @@ window.onload = function () {
     Promise.all(dataList).then(function (datas) {
         fossilData = datas[1];
 
-        fossilData.forEach(function (d) {
-            d.rgb = JSON.parse(d.rgb);
-        });
+        // fossilData.forEach(function (d) {
+        //     d.rgb = JSON.parse(d.rgb);
+        // });
 
         drawTree(datas[0], tree_g, clipTimeWidth, clipTimeHeight);
         map.on('style.load', () => {
             const waiting = () => {
                 if (!map.isStyleLoaded()) {
-                    setTimeout(waiting, 2000);
+                    setTimeout(waiting, 200);
                 } else {
                     renderScatter(fossilData, map);
                     // map.on('mousemove', event => glyphMousemove(fossilData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));

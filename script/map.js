@@ -59,7 +59,7 @@ function renderScatter(data, map) {
         radiusMaxPixels: 100,
         lineWidthMinPixels: 1,
         getPosition: d => [+d.Longitude, +d.Latitude],
-        getFillColor: d => d.rgb,
+        getFillColor: d => JSON.parse(d.rgb),
         getLineColor: d => [119, 119, 119],
         visible: true,
     });
