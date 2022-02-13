@@ -1,13 +1,12 @@
 let dataList = [
     d3.json('data/tree2.json', d3.autoType),
-    // d3.csv('data/10wGPS.csv', d3.autoType),
-    d3.csv('data/fossil8_20220213.csv', d3.autoType)
+    d3.csv('data/10wGPS.csv', d3.autoType),
+    // d3.csv('data/fossil8_20220213.csv', d3.autoType)
 ];
 
 window.onload = function () {
     Promise.all(dataList).then(function (datas) {
         fossilData = datas[1];
-        // fossilDataforimg = _.cloneDeep(fossilData);
 
         fossilData.forEach(function (d) {
             d.rgb = JSON.parse(d.rgb);
@@ -17,7 +16,7 @@ window.onload = function () {
         map.on('style.load', () => {
             const waiting = () => {
                 if (!map.isStyleLoaded()) {
-                    setTimeout(waiting, 200);
+                    setTimeout(waiting, 2000);
                 } else {
                     renderScatter(fossilData, map);
                     // map.on('mousemove', event => glyphMousemove(fossilData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
@@ -26,6 +25,5 @@ window.onload = function () {
             };
             waiting();
         });
-        // projectMapData(_.cloneDeep(fossilData), node_g, map);
     });
 }
