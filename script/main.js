@@ -15,7 +15,7 @@ window.onload = function () {
         map.on('style.load', () => {
             const waiting = () => {
                 if (!map.isStyleLoaded()) {
-                    setTimeout(waiting, 1000);
+                    setTimeout(waiting, 200);
                 } else {
                     renderScatter(fossilData, map);
                     // map.on('mousemove', event => glyphMousemove(fossilData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
