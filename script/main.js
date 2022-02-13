@@ -7,10 +7,6 @@ window.onload = function () {
     Promise.all(dataList).then(function (datas) {
         fossilData = datas[1];
 
-        // fossilData.forEach(function (d) {
-        //     d.rgb = JSON.parse(d.rgb);
-        // });
-
         drawTree(datas[0], tree_g, clipTimeWidth, clipTimeHeight);
         map.on('styledata', () => {
             const waiting = () => {
@@ -18,7 +14,6 @@ window.onload = function () {
                     setTimeout(waiting, 200);
                 } else {
                     renderScatter(fossilData, map);
-                    // map.on('mousemove', event => glyphMousemove(fossilData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
                     mapboxSvg.on('mousemove', event => glyphMousemove(fossilData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
                 }
             };
