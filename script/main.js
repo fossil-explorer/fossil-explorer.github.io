@@ -1,7 +1,6 @@
 let dataList = [
     d3.json('data/tree2.json', d3.autoType),
-    d3.csv('data/10wGPS.csv', d3.autoType),
-    // d3.csv('data/fossil8_20220213.csv', d3.autoType)
+    d3.csv('data/fossil8_20220213.csv', d3.autoType)
 ];
 
 window.onload = function () {
