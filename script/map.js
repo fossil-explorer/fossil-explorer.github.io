@@ -46,10 +46,9 @@ let sunburst_label_g = glyph_g.append('g')
 
 function renderScatter(data, map) {
     deckScatterLayer = new deck.MapboxLayer({
-        id: 'scatter',
+        id: 'fossil-graptolites',
         type: deck.ScatterplotLayer,
         data: data,
-        // radiusUnits: 'pixels',
         pickable: true,
         opacity: 1,
         stroked: true,
@@ -64,7 +63,9 @@ function renderScatter(data, map) {
         visible: true,
     });
 
-    map.addLayer(deckScatterLayer);
+    if (!map.getLayer('fossil-graptolites')) {
+        map.addLayer(deckScatterLayer);
+    }
 }
 
 function projectMapData(data, svg, map) {

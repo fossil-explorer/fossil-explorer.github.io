@@ -12,7 +12,7 @@ window.onload = function () {
         // });
 
         drawTree(datas[0], tree_g, clipTimeWidth, clipTimeHeight);
-        map.on('style.load', () => {
+        map.on('styledata', () => {
             const waiting = () => {
                 if (!map.isStyleLoaded()) {
                     setTimeout(waiting, 200);
