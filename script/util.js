@@ -46,8 +46,15 @@ function filterByClickTreeToProject(data, age, node_g, map) {
         return;
     }
 
-    projectMapData(_.cloneDeep(filterData), node_g, map);
+    // projectMapData(_.cloneDeep(filterData), node_g, map);
+    updateScatterData(_.cloneDeep(filterData));
+}
 
+function updateScatterData(data) {
+    // https://github.com/visgl/deck.gl/blob/master/docs/api-reference/layer.md#updatetriggers-object-optional
+    deckScatterLayer.setProps({
+        data: data,
+    });
 }
 
 function dragElement(elmnt) {

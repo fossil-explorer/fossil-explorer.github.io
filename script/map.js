@@ -44,6 +44,29 @@ let sunburst_label_g = glyph_g.append('g')
     .attr('text-anchor', 'middle')
     .attr('font-size', 10);
 
+function renderScatter(data, map) {
+    deckScatterLayer = new deck.MapboxLayer({
+        id: 'scatter',
+        type: deck.ScatterplotLayer,
+        data: data,
+        // radiusUnits: 'pixels',
+        pickable: true,
+        opacity: 1,
+        stroked: true,
+        filled: true,
+        radiusScale: 10,
+        radiusMinPixels: 4,
+        radiusMaxPixels: 100,
+        lineWidthMinPixels: 1,
+        getPosition: d => [+d.Longitude, +d.Latitude],
+        getFillColor: d => d.rgb,
+        getLineColor: d => [119, 119, 119],
+        visible: true,
+    });
+
+    map.addLayer(deckScatterLayer);
+}
+
 function projectMapData(data, svg, map) {
     let node = svg.selectAll('.fossil')
         .data(data)

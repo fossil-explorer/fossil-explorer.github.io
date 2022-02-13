@@ -1,14 +1,11 @@
-function glyphMousemove(node_g, glyph_g, sunburst_node_g, sunburst_label_g, event, id) {
+function glyphMousemove(data, glyph_g, sunburst_node_g, sunburst_label_g, event, id, map) {
     // https://stackoverflow.com/questions/64189608/d3-v6-pointer-function-not-adjusting-for-scale-and-translate
     let [x, y] = d3.pointer(event, d3.select(`#${id}`).node())
 
     glyph_g.attr('transform', `translate(${x}, ${y})`);
 
-    let selectedData = node_g.selectAll('.fossil')
-        .filter(function (d) {
-            return isWithinGlyph(d, x, y) && d3.select(this).style('display') === 'block';
-        })
-        .data();
+    let selectedData = data
+        .filter(d => isWithinGlyph(d, x, y, map));
 
     if (selectedData.length !== 0) {
         let sunbrustData = d3.rollup(selectedData, v => v, d => d.Family, d => d.Genus);
@@ -147,9 +144,10 @@ function updateSunburst(node_g, label_g, data, color) {
         );
 }
 
-function isWithinGlyph(d, tx, ty) {
-    let dx = Math.abs(tx - d.x),
-        dy = Math.abs(ty - d.y),
+function isWithinGlyph(d, sx, sy, map) {
+    let t = map.project([+d.Longitude, +d.Latitude]);
+    let dx = Math.abs(sx - t.x),
+        dy = Math.abs(sy - t.y),
         dis = Math.sqrt(dx * dx + dy * dy);
     return dis < radius;
 }

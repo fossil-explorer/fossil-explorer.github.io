@@ -1,6 +1,8 @@
 let accessToken = 'pk.eyJ1IjoiaGF6YXJkdHJpZ2dlciIsImEiOiJjanl3d2d0NmQwMmNjM2NxbDhwNmVsYmkzIn0.oap8KJPjiF__xdNVrVPmvQ';
 mapboxgl.accessToken = accessToken;
 
+let deckScatterLayer = null;
+
 let fossilData = [];
 
 let radius = 50;
@@ -41,7 +43,7 @@ let AgeColorMap = {
     'Areonian-Telychian': '#C1E6DF',
     'Rhuddanian-Telychian': '#C1E6DF',
     'Rhuddanian-Areonian': '#C1E6DF',
-    'Darriwilian-Sandbian': '#777',
+    'Darriwilian-Sandbian': '#A8DDD4',
     'Dapingian-Darriwilian': '#7ED6C4'
 };
 
