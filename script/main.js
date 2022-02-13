@@ -13,17 +13,10 @@ window.onload = function () {
         });
 
         drawTree(datas[0], tree_g, clipTimeWidth, clipTimeHeight);
-        map.on('style.load', () => {
-            const waiting = () => {
-                if (!map.isStyleLoaded()) {
-                    setTimeout(waiting, 2000);
-                } else {
-                    renderScatter(fossilData, map);
-                    // map.on('mousemove', event => glyphMousemove(fossilData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
-                    mapboxSvg.on('mousemove', event => glyphMousemove(fossilData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
-                }
-            };
-            waiting();
-        });
+        setTimeout(function () {
+            renderScatter(fossilData, map);
+            // map.on('mousemove', event => glyphMousemove(fossilData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
+            mapboxSvg.on('mousemove', event => glyphMousemove(fossilData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
+        }, 5000);
     });
 }
