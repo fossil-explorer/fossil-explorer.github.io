@@ -8,10 +8,14 @@ window.onload = function () {
         fossilData = datas[1];
 
         drawTree(datas[0], tree_g, clipTimeWidth, clipTimeHeight);
-        setTimeout(function () {
-            renderScatter(fossilData, map);
-            mapboxSvg.on('mousemove', event => glyphMousemove(fossilData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
-        }, 1000);
-
+        // https://stackoverflow.com/questions/49780413/is-there-any-idle-event-for-mapbox-gl-js
+        map.once('idle', function (e) {
+            if (map.isStyleLoaded()) {
+                setTimeout(function () {
+                    renderScatter(fossilData, map);
+                    mapboxSvg.on('mousemove', event => glyphMousemove(fossilData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
+                }, 200);
+            }
+        });
     });
 }
