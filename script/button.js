@@ -70,25 +70,25 @@ d3.select('#imageWindow .drag')
             })
     );
 
-d3.select('#fsimg')
-    .call(
-        d3.drag()
-            .on('start', function (event) {
-                dragx = event.sourceEvent.clientX;
-                dragy = event.sourceEvent.clientY;
-            })
-            .on('drag', function (event) {
-                let x = $('#fsimg').position().left,
-                    y = $('#fsimg').position().top,
-                    dx = dragx - event.sourceEvent.clientX,
-                    dy = dragy - event.sourceEvent.clientY;
-                    dragx = event.sourceEvent.clientX;
-                    dragy = event.sourceEvent.clientY;
-
-                d3.select('#imageWindow')
-                    .style('z-index', 5000)
-                d3.select('#fsimg')
-                    .style('z-index', 5001)
-                    .style('transform', `translate(${x - dx}px, ${y - dy}px)`);
-            })
-    );
+// d3.select('#fsimg')
+//     .call(
+//         d3.drag()
+//             .on('start', function (event) {
+//                 dragx = event.sourceEvent.clientX;
+//                 dragy = event.sourceEvent.clientY;
+//             })
+//             .on('drag', function (event) {
+//                 let x = $('#fsimg').position().left,
+//                     y = $('#fsimg').position().top,
+//                     dx = dragx - event.sourceEvent.clientX,
+//                     dy = dragy - event.sourceEvent.clientY;
+//                     dragx = event.sourceEvent.clientX;
+//                     dragy = event.sourceEvent.clientY;
+//
+//                 d3.select('#imageWindow')
+//                     .style('z-index', 5000)
+//                 d3.select('#fsimg')
+//                     .style('z-index', 5001)
+//                     .style('transform', `translate(${x - dx}px, ${y - dy}px)`);
+//             })
+//     );

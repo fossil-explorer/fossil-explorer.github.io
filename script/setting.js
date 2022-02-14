@@ -106,4 +106,18 @@ let layersName = [
     'Wenlock'
 ];
 
+let image = d3.select('#fossil-image').node();
+const viewer = new Viewer(image, {
+    inline: false,
+    navbar: false,
+    // button: false,
+    url(image) {
+        return image.src;
+    },
+    title: [1, (image, imageData) => `${image.alt} (${imageData.naturalWidth} × ${imageData.naturalHeight})`],
+    viewed() {
+        viewer.zoomTo(1);
+    },
+});
+
 

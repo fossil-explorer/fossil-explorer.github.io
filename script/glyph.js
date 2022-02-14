@@ -154,7 +154,7 @@ function isWithinGlyph(d, sx, sy, map) {
 
 function loadImgs(div, data, event) {
     div.style('display', 'grid')
-        .style('z-index', 5000)
+        .style('z-index', 2000)
         .style('transform', `translate(${$('#main').width() - $('#imageWindow').width() - 50}px, ${40}px)`);
 
     div.select('#imgsContainer')
@@ -197,17 +197,19 @@ function loadImgs(div, data, event) {
         )
         .each(function (d) {
             d3.select(this).select('.imglist')
-                .style('background-image', `url("images/graptolites/${d['fig_name']}")`)
+                .append('img')
+                .attr('width', '100%')
+                .attr('height', '100%')
+                .style('display', 'inherit')
+                .attr('src', `images/graptolites/${d['fig_name']}`)
                 .on('click', function (event, d) {
                     d3.select('#fsimg')
-                        .style('display', 'block')
-                        .style('transform', `translate(${0}px, ${0}px)`)
-                        .style("z-index", 5000)
-                        .style('width', `${$('#mainview').width() / 2}px`)
-                        .style('height', `${$('#mainview').height()}px`)
                         .select('img')
-                        .attr('src', `images/graptolites/${d['fig_name']}`);
-                })
+                        .attr('src', `images/graptolites/${d['fig_name']}`)
+                        .attr('alt', `${d['fig_name']}`.replace('.jpg', ''))
+                    viewer.show()
+                });
+
         })
 
 }

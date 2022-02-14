@@ -6,6 +6,7 @@ let dataList = [
 window.onload = function () {
     Promise.all(dataList).then(function (datas) {
         fossilData = datas[1];
+        filterData = fossilData;
 
         drawTree(datas[0], tree_g, clipTimeWidth, clipTimeHeight);
         // https://stackoverflow.com/questions/49780413/is-there-any-idle-event-for-mapbox-gl-js
