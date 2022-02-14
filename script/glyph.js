@@ -60,7 +60,7 @@ function updateSunburst(node_g, label_g, data, color) {
                     return '#f6f5ee';
                 })
                 .attr('d', arc),
-            exit => exit.transition().remove()
+            exit => exit.remove()
         )
         .on('mouseover', function (event, d) {
             d3.select(this).attr('fill', d3.color(d.color).brighter());

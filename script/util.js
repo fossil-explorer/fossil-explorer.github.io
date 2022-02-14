@@ -1,7 +1,8 @@
 function filterByBrushToProject(data, selection, svg, map) {
     let filterData = data.filter(d => selection[1] <= +d.age_to && +d.age_from <= selection[0]);
-    // projectMapData(filterData, svg, map);
-    updateScatterData(_.cloneDeep(filterData));
+    updateScatterData(filterData, deckScatterLayer);
+    mapboxSvg.on('mousemove', event => glyphMousemove(filterData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
+
 }
 
 function filterByClickTreeToProject(data, age, node_g, map) {
@@ -47,14 +48,19 @@ function filterByClickTreeToProject(data, age, node_g, map) {
         return;
     }
 
-    // projectMapData(_.cloneDeep(filterData), node_g, map);
-    updateScatterData(_.cloneDeep(filterData));
+    updateScatterData(filterData, deckScatterLayer);
+    mapboxSvg.on('mousemove', event => glyphMousemove(filterData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
+
 }
 
-function updateScatterData(data) {
+function updateScatterData(data, layer) {
     // https://github.com/visgl/deck.gl/blob/master/docs/api-reference/layer.md#updatetriggers-object-optional
-    deckScatterLayer.setProps({
+    layer.setProps({
         data: data,
+        // getFillColor: d => JSON.parse(d.rgb),
+        // updateTriggers: {
+        //     getFillColor: d => JSON.parse(d.rgb)
+        // }
     });
 }
 

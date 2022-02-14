@@ -8,17 +8,10 @@ window.onload = function () {
         fossilData = datas[1];
 
         drawTree(datas[0], tree_g, clipTimeWidth, clipTimeHeight);
-        map.on('styledata', () => {
-            const waiting = () => {
-                if (!map.isStyleLoaded()) {
-                    setTimeout(waiting, 200);
-                } else {
-                    renderScatter(fossilData, map);
-                    mapboxSvg.on('mousemove', event => glyphMousemove(fossilData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
-                }
-            };
-            waiting();
-        });
+        setTimeout(function () {
+            renderScatter(fossilData, map);
+            mapboxSvg.on('mousemove', event => glyphMousemove(fossilData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
+        }, 1000);
 
     });
 }

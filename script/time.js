@@ -59,7 +59,7 @@ function drawTree(data, tree_g, width, height) {
         .on('click', function (event, d) {
             filterByClickTreeToProject(fossilData, d.data.name, node_g, map);
             d3.selectAll('.treerect').attr('stroke', 'none');
-            d3.select(this).attr('stroke', '#222').attr('stroke-width', 2);
+            d3.select(this).attr('stroke', '#777');
         })
         .on("dblclick", function (event) {
             d3.selectAll('.treerect').attr('stroke', 'none');
