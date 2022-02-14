@@ -41,7 +41,7 @@ d3.select('#map')
             mapboxSvg.on('mousemove', null);
         } else {
             isPin = false;
-            mapboxSvg.on('mousemove', event => glyphMousemove(fossilData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
+            mapboxSvg.on('mousemove', event => glyphMousemove(filterData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
             closeImage();
         }
     });

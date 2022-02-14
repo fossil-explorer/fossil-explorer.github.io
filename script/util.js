@@ -1,56 +1,20 @@
 function filterByBrushToProject(data, selection, svg, map) {
-    let filterData = data.filter(d => selection[1] <= +d.age_to && +d.age_from <= selection[0]);
+    filterData = data.filter(d => selection[1] <= +d.age_to && +d.age_from <= selection[0]);
     updateScatterData(filterData, deckScatterLayer);
     mapboxSvg.on('mousemove', event => glyphMousemove(filterData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
 
 }
 
 function filterByClickTreeToProject(data, age, node_g, map) {
-    // https://stackoverflow.com/questions/1789945/how-to-check-whether-a-string-contains-a-substring-in-javascript
-    let filterData = [];
-    switch (age) {
-        case 'Paleozoic':
-            filterData = data;
-            break;
-        case 'Ordovician':
-            filterData = data.filter(d => d.Subera === 'Ordovician');
-            break;
-        case 'Silurian':
-            filterData = data.filter(d => d.Subera === 'Silurian');
-            break;
-        case 'Lower':
-            filterData = data.filter(d => d.Epoch.includes('Lower'));
-            break;
-        case 'Middle':
-            filterData = data.filter(d => d.Epoch.includes('Middle'));
-            break;
-        case 'Upper':
-            filterData = data.filter(d => d.Epoch.includes('Upper'));
-            break;
-        case 'Llandovery':
-            filterData = data.filter(d => d.Epoch.includes('Llandovery'));
-            break;
-        case 'Wenlock':
-            filterData = data.filter(d => d.Epoch.includes('Wenlock'));
-            break;
-        case 'Ludlow':
-            filterData = data.filter(d => d.Epoch.includes('Ludlow'));
-            break;
-        case 'Pridoli':
-            filterData = data.filter(d => d.Epoch.includes('Pridoli'));
-            break;
-        default:
-            filterData = data.filter(d => d.Age.includes(age));
-    }
-
+    // https://stackoverflow.com/questions/35948669/how-to-check-if-a-value-exists-in-an-object-using-javascript/57944826
+    filterData = data.filter(d => Object.values(d).indexOf(age) > -1)
     if (filterData.length === 0 || age === '') {
-        console.log("No Data");
+        alert("No Data");
         return;
     }
 
     updateScatterData(filterData, deckScatterLayer);
     mapboxSvg.on('mousemove', event => glyphMousemove(filterData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
-
 }
 
 function updateScatterData(data, layer) {

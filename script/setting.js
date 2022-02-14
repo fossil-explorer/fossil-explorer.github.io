@@ -5,6 +5,8 @@ let deckScatterLayer = null;
 
 let fossilData = [];
 
+let filterData = [];
+
 let radius = 50;
 
 let filterMagnifierData = [];
