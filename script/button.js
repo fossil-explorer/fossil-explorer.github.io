@@ -7,31 +7,31 @@ d3.select('#imageWindow .close')
         d3.select('#fsimg').style('display', 'none');
     });
 
-d3.select('#fsimg .close')
-    .on('click', function (event) {
-        d3.select('#fsimg').style('display', 'none');
-    });
+// d3.select('#fsimg .close')
+//     .on('click', function (event) {
+//         d3.select('#fsimg').style('display', 'none');
+//     });
 
 
-d3.select('#amplify')
-    .on('click', function (event) {
-        let width = parseFloat(d3.select('#fsimg').style('width').replace('px', "")),
-            height = parseFloat(d3.select('#fsimg').style('height').replace('px', ""));
-
-        d3.select('#fsimg')
-            .style('width', `${width + 100}px`)
-            .style('height', `${height + 100}px`);
-    });
-
-d3.select('#narrow')
-    .on('click', function (event) {
-        let width = parseFloat(d3.select('#fsimg').style('width').replace('px', "")),
-            height = parseFloat(d3.select('#fsimg').style('height').replace('px', ""));
-
-        d3.select('#fsimg')
-            .style('width', `${width - 100}px`)
-            .style('height', `${height - 100}px`);
-    });
+// d3.select('#amplify')
+//     .on('click', function (event) {
+//         let width = parseFloat(d3.select('#fsimg').style('width').replace('px', "")),
+//             height = parseFloat(d3.select('#fsimg').style('height').replace('px', ""));
+//
+//         d3.select('#fsimg')
+//             .style('width', `${width + 100}px`)
+//             .style('height', `${height + 100}px`);
+//     });
+//
+// d3.select('#narrow')
+//     .on('click', function (event) {
+//         let width = parseFloat(d3.select('#fsimg').style('width').replace('px', "")),
+//             height = parseFloat(d3.select('#fsimg').style('height').replace('px', ""));
+//
+//         d3.select('#fsimg')
+//             .style('width', `${width - 100}px`)
+//             .style('height', `${height - 100}px`);
+//     });
 
 let isPin = false;
 d3.select('#map')
@@ -62,10 +62,10 @@ d3.select('#imageWindow .drag')
                     dragx = event.sourceEvent.clientX;
                     dragy = event.sourceEvent.clientY;
 
-                d3.select('#fsimg')
-                    .style('z-index', 5000);
+                // d3.select('#fsimg')
+                //     .style('z-index', 5000);
                 d3.select('#imageWindow')
-                    .style('z-index', 5001)
+                //     .style('z-index', 5001)
                     .style('transform', `translate(${x - dx}px, ${y - dy}px)`);
             })
     );
