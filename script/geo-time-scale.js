@@ -65,7 +65,7 @@ function drawGeoTimeScale(data, g, svg, width, height, clipWidth, clipHeight) {
             return Number.isNaN(textx) ? -1000 : textx;
         })
         .attr('y', d => (d.y1 - d.y0) / 2)
-        .attr('fill', d => d.data.textColor || 'black')
+        .attr('fill', '#222')
         .attr('fill-opacity', labelVisible)
         .attr('text-anchor', 'middle')
         .attr('dominant-baseline', 'middle')
