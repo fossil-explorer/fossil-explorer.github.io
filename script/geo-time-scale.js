@@ -1,9 +1,10 @@
 let timeWidth = $('#time').width(),
     timeHeight = $('#time').height(),
-    timeMargin = {left: 2, top: 0, right: 2, bottom: 0},
+    timeMargin = {left: 2, top: 2, right: 2, bottom: 50},
     clipTimeWidth = timeWidth - timeMargin.left - timeMargin.right,
     clipTimeHeight = timeHeight - timeMargin.top - timeMargin.bottom,
     neighborWidth = 25,
+    tickLength = 10,
     font = '12px sans-serif',
     hideSmallTicks = true;
 
@@ -16,7 +17,7 @@ let timeSvg = d3.select('#time').append('svg')
 let tree_g = timeSvg.append('g')
     .attr('class', 'tree_g');
 
-function drawGeoTimeScale(data, g, svg, width, height, clipWidth, clipHeight) {
+function drawGeoTimeScale(data, g, svg, width, height, clipWidth, clipHeight, hideSmallTicks, margin) {
     let hierarchicalData = d3.stratify()(data)
         .sum(d => (d.leaf ? d.start - d.end : 0))
         .sort((a, b) => b.start - a.start);
@@ -75,6 +76,13 @@ function drawGeoTimeScale(data, g, svg, width, height, clipWidth, clipHeight) {
             const abbrev = d.data.abr || d.data.name.charAt(0);
             return rectWidth - 10 < labelWidth ? abbrev : d.data.name;
         });
+
+    const ticksGroup = g
+        .append("g")
+        .attr("id", "ticks")
+        .attr("transform", `translate(0, ${clipHeight})`); // Move tick group down
+
+    ticksGroup.call(g => drawTicks(g, makeTicksData(root, clipWidth), hideSmallTicks, width, margin));
 
     svg.call(
         d3.zoom()
@@ -147,6 +155,8 @@ function drawGeoTimeScale(data, g, svg, width, height, clipWidth, clipHeight) {
                 return rectWidth - 8 < labelWidth ? abbrev : d.data.name;
             });
 
+        ticksGroup.call(g => drawTicks(g, makeTicksData(root, clipWidth), hideSmallTicks, width, margin));
+
         filterByClickTreeToProject(fossilData, focus.data.name, node_g, map);
     }
 
@@ -163,6 +173,87 @@ function drawGeoTimeScale(data, g, svg, width, height, clipWidth, clipHeight) {
         g.attr("transform", `translate(${translateX},0)`);
     }
 }
+
+function drawTicks(g, data, hideSmallTicks, t, width, margin) {
+    g
+        .selectAll("g")
+        .data(data)
+        .join(
+            (enter) => {
+                const tick = enter
+                    .append("g")
+                    .attr("transform", (d) => `translate(${d.x}, 0)`)
+                    .attr("text-anchor", (d) =>
+                        d.x === 0 ? "start" : d.x === width ? "end" : "middle"
+                    )
+                    .attr("opacity", (d) =>
+                        [4, 5].includes(d.depth) && hideSmallTicks ? 0 : 1
+                    );
+
+                tick
+                    .append("line")
+                    .attr("stroke", "#555")
+                    .attr("stroke-width", 1)
+                    .attr("x1", 0)
+                    .attr("y1", 2)
+                    .attr("x2", 0)
+                    .attr("y2", (d) => 35 - d.depth * tickLength);
+
+                tick
+                    .append("text")
+                    .attr("x", 0)
+                    .attr("y", (d) => 35 - d.depth * tickLength + 4)
+                    .attr("dominant-baseline", "hanging")
+                    .attr("font-size", (d) => `${1 - 0.05 * d.depth}em`)
+                    .text((d) => d.text)
+                    .clone(true)
+                    .lower()
+                    .attr("stroke-linejoin", "round")
+                    .attr("stroke-width", 2)
+                    .attr("stroke", "white");
+            },
+            (update) =>
+                update
+                    .transition(t)
+                    .attr("opacity", (d) =>
+                        [4, 5].includes(d.depth) && hideSmallTicks ? 0 : 1
+                    )
+                    .attr("transform", (d) => `translate(${d.targetX}, 0)`)
+                    .attr("dominant-baseline", "hanging")
+                    .attr("text-anchor", (d) =>
+                        d.targetX === 0 ? "start" : d.targetX === width ? "end" : "middle"
+                    )
+        )
+}
+
+function makeTicksData(root, width) {
+    const uniqueStartAges = new Set(
+        root.descendants().map((node) => node.data.start)
+    );
+
+    const ticksData = Array.from(uniqueStartAges)
+        .map((start) =>
+            root.descendants().find((node) => node.data.start === start)
+        )
+        .map((d) => ({
+            x: d.x0,
+            depth: d.depth,
+            targetX: d?.target?.x0 || 0,
+            text: d.data.start
+        }));
+
+    const now = {
+        x: root.x1,
+        depth: 0,
+        targetX: root?.target?.x1 || width,
+        text: 0
+    };
+
+    ticksData.push(now);
+
+    return ticksData;
+}
+
 
 function labelVisible(d) {
     return +(d.x1 - d.x0 > 14);

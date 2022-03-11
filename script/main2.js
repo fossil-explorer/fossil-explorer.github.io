@@ -8,7 +8,7 @@ $(function () {
         fossilData = datas[1];
         filterData = fossilData;
 
-        drawGeoTimeScale(datas[0], tree_g, timeSvg, timeWidth, timeHeight, clipTimeWidth, clipTimeHeight);
+        drawGeoTimeScale(datas[0], tree_g, timeSvg, timeWidth, timeHeight, clipTimeWidth, clipTimeHeight, hideSmallTicks, timeMargin);
         // https://stackoverflow.com/questions/49780413/is-there-any-idle-event-for-mapbox-gl-js
         map.once('idle', function (e) {
             if (map.isStyleLoaded()) {
