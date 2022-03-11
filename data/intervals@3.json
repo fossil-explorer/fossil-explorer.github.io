@@ -5,7 +5,8 @@
         "level": 1,
         "color": "#9AD9DD",
         "end": 0,
-        "start": 541
+        "start": 541,
+        "num": 0
     },
     {
         "id": 3,
@@ -15,7 +16,8 @@
         "parentId": 751,
         "color": "#99C08D",
         "end": 252.2,
-        "start": 541
+        "start": 541,
+        "num": 1550
     },
     {
         "id": 2,
@@ -25,7 +27,8 @@
         "parentId": 751,
         "color": "#67C5CA",
         "end": 66,
-        "start": 252.2
+        "start": 252.2,
+        "num": 0
     },
     {
         "id": 1,
@@ -35,7 +38,8 @@
         "parentId": 751,
         "color": "#F2F91D",
         "end": 0,
-        "start": 66
+        "start": 66,
+        "num": 0
     },
     {
         "id": 22,
@@ -46,7 +50,8 @@
         "textColor": "white",
         "color": "#7FA056",
         "end": 485.4,
-        "start": 541
+        "start": 541,
+        "num": 0
     },
     {
         "id": 21,
@@ -57,7 +62,8 @@
         "textColor": "white",
         "color": "#009270",
         "end": 443.4,
-        "start": 485.4
+        "start": 485.4,
+        "num": 1176
     },
     {
         "id": 20,
@@ -67,7 +73,8 @@
         "parentId": 3,
         "color": "#B3E1B6",
         "end": 419.2,
-        "start": 443.4
+        "start": 443.4,
+        "num": 0
     },
     {
         "id": 19,
@@ -77,7 +84,8 @@
         "parentId": 3,
         "color": "#CB8C37",
         "end": 358.9,
-        "start": 419.2
+        "start": 419.2,
+        "num": 0
     },
     {
         "id": 18,
@@ -88,7 +96,8 @@
         "textColor": "white",
         "color": "#67A599",
         "end": 298.9,
-        "start": 358.9
+        "start": 358.9,
+        "num": 0
     },
     {
         "id": 17,
@@ -98,7 +107,8 @@
         "parentId": 3,
         "color": "#F04028",
         "end": 252.2,
-        "start": 298.9
+        "start": 298.9,
+        "num": 0
     },
     {
         "id": 16,
@@ -109,7 +119,8 @@
         "textColor": "white",
         "color": "#812B92",
         "end": 201.3,
-        "start": 252.2
+        "start": 252.2,
+        "num": 0
     },
     {
         "id": 15,
@@ -120,7 +131,8 @@
         "textColor": "white",
         "color": "#34B2C9",
         "end": 145,
-        "start": 201.3
+        "start": 201.3,
+        "num": 0
     },
     {
         "id": 14,
@@ -130,7 +142,8 @@
         "parentId": 2,
         "color": "#7FC64E",
         "end": 66,
-        "start": 145
+        "start": 145,
+        "num": 0
     },
     {
         "id": 26,
@@ -140,7 +153,8 @@
         "parentId": 1,
         "color": "#FD9A52",
         "end": 23.03,
-        "start": 66
+        "start": 66,
+        "num": 0
     },
     {
         "id": 25,
@@ -150,7 +164,8 @@
         "parentId": 1,
         "color": "#FFE619",
         "end": 2.588,
-        "start": 23.03
+        "start": 23.03,
+        "num": 0
     },
     {
         "id": 12,
@@ -159,7 +174,8 @@
         "parentId": 1,
         "color": "#F9F97F",
         "end": 0,
-        "start": 2.588
+        "start": 2.588,
+        "num": 0
     },
     {
         "id": 1111,
@@ -168,7 +184,8 @@
         "parentId": 22,
         "color": "#8CB06C",
         "end": 521,
-        "start": 541
+        "start": 541,
+        "num": 0
     },
     {
         "id": 1110,
@@ -177,7 +194,8 @@
         "parentId": 22,
         "color": "#99C078",
         "end": 509,
-        "start": 521
+        "start": 521,
+        "num": 0
     },
     {
         "id": 1109,
@@ -186,7 +204,8 @@
         "parentId": 22,
         "color": "#A6CF86",
         "end": 497,
-        "start": 509
+        "start": 509,
+        "num": 0
     },
     {
         "id": 780,
@@ -195,7 +214,8 @@
         "parentId": 22,
         "color": "#B3E095",
         "end": 485.4,
-        "start": 497
+        "start": 497,
+        "num": 0
     },
     {
         "id": 31,
@@ -205,7 +225,8 @@
         "textColor": "white",
         "color": "#1A9D6F",
         "end": 470,
-        "start": 485.4
+        "start": 485.4,
+        "num": 0
     },
     {
         "id": 30,
@@ -215,7 +236,8 @@
         "textColor": "white",
         "color": "#4DB47E",
         "end": 458.4,
-        "start": 470
+        "start": 470,
+         "num": 385
     },
     {
         "id": 29,
@@ -224,7 +246,8 @@
         "parentId": 21,
         "color": "#7FCA93",
         "end": 443.4,
-        "start": 458.4
+        "start": 458.4,
+        "num": 838
     },
     {
         "id": 62,
@@ -233,7 +256,8 @@
         "parentId": 20,
         "color": "#99D7B3",
         "end": 433.4,
-        "start": 443.4
+        "start": 443.4,
+        "num": 336
     },
     {
         "id": 61,
@@ -242,7 +266,8 @@
         "parentId": 20,
         "color": "#B3E1C2",
         "end": 427.4,
-        "start": 433.4
+        "start": 433.4,
+        "num": 26
     },
     {
         "id": 60,
@@ -251,7 +276,8 @@
         "parentId": 20,
         "color": "#BFE6CF",
         "end": 423,
-        "start": 427.4
+        "start": 427.4,
+        "num": 0
     },
     {
         "id": 59,
@@ -260,7 +286,8 @@
         "parentId": 20,
         "color": "#E6F5E1",
         "end": 419.2,
-        "start": 423
+        "start": 423,
+        "num": 0
     },
     {
         "id": 58,
@@ -269,7 +296,8 @@
         "parentId": 19,
         "color": "#E5AC4D",
         "end": 393.3,
-        "start": 419.2
+        "start": 419.2,
+        "num": 0
     },
     {
         "id": 57,
@@ -278,7 +306,8 @@
         "parentId": 19,
         "color": "#F1C868",
         "end": 382.7,
-        "start": 393.3
+        "start": 393.3,
+        "num": 0
     },
     {
         "id": 56,
@@ -287,7 +316,8 @@
         "parentId": 19,
         "color": "#F1E19D",
         "end": 358.9,
-        "start": 382.7
+        "start": 382.7,
+        "num": 0
     },
     {
         "id": 28,
@@ -297,7 +327,8 @@
         "textColor": "white",
         "color": "#678F66",
         "end": 323.2,
-        "start": 358.9
+        "start": 358.9,
+        "num": 0
     },
     {
         "id": 27,
@@ -306,7 +337,8 @@
         "parentId": 18,
         "color": "#99C2B5",
         "end": 298.9,
-        "start": 323.2
+        "start": 323.2,
+        "num": 0
     },
     {
         "id": 773,
@@ -315,7 +347,8 @@
         "parentId": 17,
         "color": "#EF5845",
         "end": 272.3,
-        "start": 298.9
+        "start": 298.9,
+        "num": 0
     },
     {
         "id": 772,
@@ -324,7 +357,8 @@
         "parentId": 17,
         "color": "#FB745C",
         "end": 259.9,
-        "start": 272.3
+        "start": 272.3,
+        "num": 0
     },
     {
         "id": 771,
@@ -333,7 +367,8 @@
         "parentId": 17,
         "color": "#FBA794",
         "end": 252.2,
-        "start": 259.9
+        "start": 259.9,
+        "num": 0
     },
     {
         "id": 46,
@@ -343,7 +378,8 @@
         "textColor": "white",
         "color": "#983999",
         "end": 247.2,
-        "start": 252.2
+        "start": 252.2,
+        "num": 0
     },
     {
         "id": 45,
@@ -353,7 +389,8 @@
         "textColor": "white",
         "color": "#B168B1",
         "end": 237,
-        "start": 247.2
+        "start": 247.2,
+        "num": 0
     },
     {
         "id": 44,
@@ -363,7 +400,8 @@
         "textColor": "white",
         "color": "#BD8CC3",
         "end": 201.3,
-        "start": 237
+        "start": 237,
+        "num": 0
     },
     {
         "id": 43,
@@ -373,7 +411,8 @@
         "textColor": "white",
         "color": "#42AED0",
         "end": 174.1,
-        "start": 201.3
+        "start": 201.3,
+        "num": 0
     },
     {
         "id": 42,
@@ -382,7 +421,8 @@
         "parentId": 15,
         "color": "#80CFD8",
         "end": 163.5,
-        "start": 174.1
+        "start": 174.1,
+        "num": 0
     },
     {
         "id": 41,
@@ -391,7 +431,8 @@
         "parentId": 15,
         "color": "#B3E3EE",
         "end": 145,
-        "start": 163.5
+        "start": 163.5,
+        "num": 0
     },
     {
         "id": 40,
@@ -400,7 +441,8 @@
         "parentId": 14,
         "color": "#8CCD57",
         "end": 100.5,
-        "start": 145
+        "start": 145,
+        "num": 0
     },
     {
         "id": 39,
@@ -409,7 +451,8 @@
         "parentId": 14,
         "color": "#A6D84A",
         "end": 66,
-        "start": 100.5
+        "start": 100.5,
+        "num": 0
     },
     {
         "id": 38,
@@ -418,7 +461,8 @@
         "parentId": 26,
         "color": "#FDA75F",
         "end": 56,
-        "start": 66
+        "start": 66,
+        "num": 0
     },
     {
         "id": 37,
@@ -427,7 +471,8 @@
         "parentId": 26,
         "color": "#FDB46C",
         "end": 33.9,
-        "start": 56
+        "start": 56,
+        "num": 0
     },
     {
         "id": 36,
@@ -436,7 +481,8 @@
         "parentId": 26,
         "color": "#FDC07A",
         "end": 23.03,
-        "start": 33.9
+        "start": 33.9,
+        "num": 0
     },
     {
         "id": 35,
@@ -445,7 +491,8 @@
         "parentId": 25,
         "color": "#FFFF00",
         "end": 5.333,
-        "start": 23.03
+        "start": 23.03,
+        "num": 0
     },
     {
         "id": 34,
@@ -454,7 +501,8 @@
         "parentId": 25,
         "color": "#FFFF99",
         "end": 2.588,
-        "start": 5.333
+        "start": 5.333,
+        "num": 0
     },
     {
         "id": 33,
@@ -463,7 +511,8 @@
         "parentId": 12,
         "color": "#FFF2AE",
         "end": 0.0117,
-        "start": 2.588
+        "start": 2.588,
+        "num": 0
     },
     {
         "id": 32,
@@ -472,7 +521,8 @@
         "parentId": 12,
         "color": "#FEF2E0",
         "end": 0,
-        "start": 0.0117
+        "start": 0.0117,
+        "num": 0
     },
     {
         "id": 1121,
@@ -482,7 +532,8 @@
         "parentId": 1111,
         "color": "#99B575",
         "end": 529,
-        "start": 541
+        "start": 541,
+        "num": 0
     },
     {
         "id": 1120,
@@ -492,7 +543,8 @@
         "parentId": 1111,
         "color": "#A6BA80",
         "end": 521,
-        "start": 529
+        "start": 529,
+        "num": 0
     },
     {
         "id": 1119,
@@ -502,7 +554,8 @@
         "parentId": 1110,
         "color": "#A6C583",
         "end": 514,
-        "start": 521
+        "start": 521,
+        "num": 0
     },
     {
         "id": 1118,
@@ -512,7 +565,8 @@
         "parentId": 1110,
         "color": "#B3CA8E",
         "end": 509,
-        "start": 514
+        "start": 514,
+        "num": 0
     },
     {
         "id": 1117,
@@ -522,7 +576,8 @@
         "parentId": 1109,
         "color": "#B3D492",
         "end": 504.5,
-        "start": 509
+        "start": 509,
+        "num": 0
     },
     {
         "id": 1116,
@@ -532,7 +587,8 @@
         "parentId": 1109,
         "color": "#BFD99D",
         "end": 500.5,
-        "start": 504.5
+        "start": 504.5,
+        "num": 0
     },
     {
         "id": 1087,
@@ -542,7 +598,8 @@
         "parentId": 1109,
         "color": "#CCDFAA",
         "end": 497,
-        "start": 500.5
+        "start": 500.5,
+        "num": 0
     },
     {
         "id": 1114,
@@ -552,7 +609,8 @@
         "parentId": 780,
         "color": "#CCEBAE",
         "end": 494,
-        "start": 497
+        "start": 497,
+        "num": 0
     },
     {
         "id": 1113,
@@ -562,7 +620,8 @@
         "parentId": 780,
         "color": "#D9F0BB",
         "end": 489.5,
-        "start": 494
+        "start": 494,
+        "num": 0
     },
     {
         "id": 1112,
@@ -572,7 +631,8 @@
         "parentId": 780,
         "color": "#E6F5C9",
         "end": 485.4,
-        "start": 489.5
+        "start": 489.5,
+        "num": 0
     },
     {
         "id": 559,
@@ -583,7 +643,8 @@
         "textColor": "white",
         "color": "#33A97E",
         "end": 477.7,
-        "start": 485.4
+        "start": 485.4,
+        "num": 0
     },
     {
         "id": 1010,
@@ -594,7 +655,8 @@
         "textColor": "white",
         "color": "#41B087",
         "end": 470,
-        "start": 477.7
+        "start": 477.7,
+        "num": 0
     },
     {
         "id": 1079,
@@ -605,7 +667,8 @@
         "textColor": "white",
         "color": "#66C092",
         "end": 467.3,
-        "start": 470
+        "start": 470,
+        "num": 116
     },
     {
         "id": 556,
@@ -616,7 +679,8 @@
         "textColor": "white",
         "color": "#74C69C",
         "end": 458.4,
-        "start": 467.3
+        "start": 467.3,
+        "num": 342
     },
     {
         "id": 1009,
@@ -626,7 +690,8 @@
         "parentId": 29,
         "color": "#8CD094",
         "end": 453,
-        "start": 458.4
+        "start": 458.4,
+        "num": 263
     },
     {
         "id": 1008,
@@ -636,7 +701,8 @@
         "parentId": 29,
         "color": "#99D69F",
         "end": 445.2,
-        "start": 453
+        "start": 453,
+        "num": 408
     },
     {
         "id": 192,
@@ -646,7 +712,8 @@
         "parentId": 29,
         "color": "#A6DBAB",
         "end": 443.4,
-        "start": 445.2
+        "start": 445.2,
+        "num": 167
     },
     {
         "id": 191,
@@ -656,7 +723,9 @@
         "parentId": 62,
         "color": "#A6DCB5",
         "end": 440.8,
-        "start": 443.4
+        "start": 443.4,
+        "num": 214
+
     },
     {
         "id": 190,
@@ -666,7 +735,8 @@
         "parentId": 62,
         "color": "#B3E1C2",
         "end": 438.5,
-        "start": 440.8
+        "start": 440.8,
+        "num": 192
     },
     {
         "id": 189,
@@ -676,7 +746,8 @@
         "parentId": 62,
         "color": "#BFE6D1",
         "end": 433.4,
-        "start": 438.5
+        "start": 438.5,
+        "num": 105
     },
     {
         "id": 188,
@@ -686,7 +757,8 @@
         "parentId": 61,
         "color": "#BFE6C3",
         "end": 430.5,
-        "start": 433.4
+        "start": 433.4,
+        "num": 0
     },
     {
         "id": 785,
@@ -696,7 +768,8 @@
         "parentId": 61,
         "color": "#CCEBD1",
         "end": 427.4,
-        "start": 430.5
+        "start": 430.5,
+        "num": 26
     },
     {
         "id": 185,
@@ -706,7 +779,8 @@
         "parentId": 60,
         "color": "#CCECDD",
         "end": 425.6,
-        "start": 427.4
+        "start": 427.4,
+        "num": 0
     },
     {
         "id": 184,
@@ -716,7 +790,8 @@
         "parentId": 60,
         "color": "#D9F0DF",
         "end": 423,
-        "start": 425.6
+        "start": 425.6,
+        "num": 0
     },
     {
         "id": 3001,
@@ -726,7 +801,8 @@
         "parentId": 59,
         "color": "#E6F5E1",
         "end": 419.2,
-        "start": 423
+        "start": 423,
+        "num": 0
     },
     {
         "id": 183,
@@ -736,7 +812,8 @@
         "parentId": 58,
         "color": "#E5B75A",
         "end": 410.8,
-        "start": 419.2
+        "start": 419.2,
+        "num": 0
     },
     {
         "id": 182,
@@ -746,7 +823,8 @@
         "parentId": 58,
         "color": "#E5C468",
         "end": 407.6,
-        "start": 410.8
+        "start": 410.8,
+        "num": 0
     },
     {
         "id": 181,
@@ -756,7 +834,8 @@
         "parentId": 58,
         "color": "#E5D075",
         "end": 393.3,
-        "start": 407.6
+        "start": 407.6,
+        "num": 0
     },
     {
         "id": 180,
@@ -766,7 +845,8 @@
         "parentId": 57,
         "color": "#F1D576",
         "end": 387.7,
-        "start": 393.3
+        "start": 393.3,
+        "num": 0
     },
     {
         "id": 179,
@@ -776,7 +856,8 @@
         "parentId": 57,
         "color": "#F1E185",
         "end": 382.7,
-        "start": 387.7
+        "start": 387.7,
+        "num": 0
     },
     {
         "id": 178,
@@ -786,7 +867,8 @@
         "parentId": 56,
         "color": "#F2EDAD",
         "end": 372.2,
-        "start": 382.7
+        "start": 382.7,
+        "num": 0
     },
     {
         "id": 177,
@@ -796,7 +878,8 @@
         "parentId": 56,
         "color": "#F2EDC5",
         "end": 358.9,
-        "start": 372.2
+        "start": 372.2,
+        "num": 0
     },
     {
         "id": 55,
@@ -806,7 +889,8 @@
         "parentId": 28,
         "color": "#8CB06C",
         "end": 346.7,
-        "start": 358.9
+        "start": 358.9,
+        "num": 0
     },
     {
         "id": 54,
@@ -816,7 +900,8 @@
         "parentId": 28,
         "color": "#A6B96C",
         "end": 330.9,
-        "start": 346.7
+        "start": 346.7,
+        "num": 0
     },
     {
         "id": 53,
@@ -826,7 +911,8 @@
         "parentId": 28,
         "color": "#BFC26B",
         "end": 323.2,
-        "start": 330.9
+        "start": 330.9,
+        "num": 0
     },
     {
         "id": 52,
@@ -836,7 +922,8 @@
         "parentId": 27,
         "color": "#99C2B6",
         "end": 315.2,
-        "start": 323.2
+        "start": 323.2,
+        "num": 0
     },
     {
         "id": 51,
@@ -846,7 +933,8 @@
         "parentId": 27,
         "color": "#B3CBB9",
         "end": 307,
-        "start": 315.2
+        "start": 315.2,
+        "num": 0
     },
     {
         "id": 50,
@@ -856,7 +944,8 @@
         "parentId": 27,
         "color": "#BFD0C5",
         "end": 303.7,
-        "start": 307
+        "start": 307,
+        "num": 0
     },
     {
         "id": 49,
@@ -866,7 +955,8 @@
         "parentId": 27,
         "color": "#CCD4C7",
         "end": 298.9,
-        "start": 303.7
+        "start": 303.7,
+        "num": 0
     },
     {
         "id": 151,
@@ -876,7 +966,8 @@
         "parentId": 773,
         "color": "#E36350",
         "end": 295.5,
-        "start": 298.9
+        "start": 298.9,
+        "num": 0
     },
     {
         "id": 150,
@@ -886,7 +977,8 @@
         "parentId": 773,
         "color": "#E36F5C",
         "end": 290.1,
-        "start": 295.5
+        "start": 295.5,
+        "num": 0
     },
     {
         "id": 149,
@@ -896,7 +988,8 @@
         "parentId": 773,
         "color": "#E37B68",
         "end": 279.3,
-        "start": 290.1
+        "start": 290.1,
+        "num": 0
     },
     {
         "id": 148,
@@ -906,7 +999,8 @@
         "parentId": 773,
         "color": "#E38776",
         "end": 272.3,
-        "start": 279.3
+        "start": 279.3,
+        "num": 0
     },
     {
         "id": 717,
@@ -916,7 +1010,8 @@
         "parentId": 772,
         "color": "#FB8069",
         "end": 268.8,
-        "start": 272.3
+        "start": 272.3,
+        "num": 0
     },
     {
         "id": 146,
@@ -926,7 +1021,8 @@
         "parentId": 772,
         "color": "#FB8D76",
         "end": 265.1,
-        "start": 268.8
+        "start": 268.8,
+        "num": 0
     },
     {
         "id": 145,
@@ -936,7 +1032,8 @@
         "parentId": 772,
         "color": "#FB9A85",
         "end": 259.9,
-        "start": 265.1
+        "start": 265.1,
+        "num": 0
     },
     {
         "id": 716,
@@ -946,7 +1043,8 @@
         "parentId": 771,
         "color": "#FCB4A2",
         "end": 254.2,
-        "start": 259.9
+        "start": 259.9,
+        "num": 0
     },
     {
         "id": 715,
@@ -956,7 +1054,8 @@
         "parentId": 771,
         "color": "#FCC0B2",
         "end": 252.2,
-        "start": 254.2
+        "start": 254.2,
+        "num": 0
     },
     {
         "id": 653,
@@ -967,7 +1066,8 @@
         "textColor": "white",
         "color": "#A4469F",
         "end": 251.2,
-        "start": 252.2
+        "start": 252.2,
+        "num": 0
     },
     {
         "id": 652,
@@ -978,7 +1078,8 @@
         "textColor": "white",
         "color": "#B051A5",
         "end": 247.2,
-        "start": 251.2
+        "start": 251.2,
+        "num": 0
     },
     {
         "id": 139,
@@ -989,7 +1090,8 @@
         "textColor": "white",
         "color": "#BC75B7",
         "end": 242,
-        "start": 247.2
+        "start": 247.2,
+        "num": 0
     },
     {
         "id": 138,
@@ -1000,7 +1102,8 @@
         "textColor": "white",
         "color": "#C983BF",
         "end": 237,
-        "start": 242
+        "start": 242,
+        "num": 0
     },
     {
         "id": 137,
@@ -1010,7 +1113,8 @@
         "parentId": 44,
         "color": "#C99BCB",
         "end": 228,
-        "start": 237
+        "start": 237,
+        "num": 0
     },
     {
         "id": 136,
@@ -1020,7 +1124,8 @@
         "parentId": 44,
         "color": "#D6AAD3",
         "end": 208.5,
-        "start": 228
+        "start": 228,
+        "num": 0
     },
     {
         "id": 135,
@@ -1031,7 +1136,8 @@
         "textColor": "white",
         "color": "#E3B9DB",
         "end": 201.3,
-        "start": 208.5
+        "start": 208.5,
+        "num": 0
     },
     {
         "id": 134,
@@ -1042,7 +1148,8 @@
         "textColor": "white",
         "color": "#4EB3D3",
         "end": 199.3,
-        "start": 201.3
+        "start": 201.3,
+        "num": 0
     },
     {
         "id": 133,
@@ -1053,7 +1160,8 @@
         "textColor": "white",
         "color": "#67BCD8",
         "end": 190.8,
-        "start": 199.3
+        "start": 199.3,
+        "num": 0
     },
     {
         "id": 132,
@@ -1064,7 +1172,8 @@
         "textColor": "white",
         "color": "#80C5DD",
         "end": 182.7,
-        "start": 190.8
+        "start": 190.8,
+        "num": 0
     },
     {
         "id": 131,
@@ -1074,7 +1183,8 @@
         "parentId": 43,
         "color": "#99CEE3",
         "end": 174.1,
-        "start": 182.7
+        "start": 182.7,
+        "num": 0
     },
     {
         "id": 130,
@@ -1084,7 +1194,8 @@
         "parentId": 42,
         "color": "#9AD9DD",
         "end": 170.3,
-        "start": 174.1
+        "start": 174.1,
+        "num": 0
     },
     {
         "id": 129,
@@ -1094,7 +1205,8 @@
         "parentId": 42,
         "color": "#A6DDE0",
         "end": 168.3,
-        "start": 170.3
+        "start": 170.3,
+        "num": 0
     },
     {
         "id": 128,
@@ -1104,7 +1216,8 @@
         "parentId": 42,
         "color": "#B3E2E3",
         "end": 166.1,
-        "start": 168.3
+        "start": 168.3,
+        "num": 0
     },
     {
         "id": 127,
@@ -1114,7 +1227,8 @@
         "parentId": 42,
         "color": "#BFE7E5",
         "end": 163.5,
-        "start": 166.1
+        "start": 166.1,
+        "num": 0
     },
     {
         "id": 126,
@@ -1124,7 +1238,8 @@
         "parentId": 41,
         "color": "#BFE7F1",
         "end": 157.3,
-        "start": 163.5
+        "start": 163.5,
+        "num": 0
     },
     {
         "id": 125,
@@ -1134,7 +1249,8 @@
         "parentId": 41,
         "color": "#CCECF4",
         "end": 152.1,
-        "start": 157.3
+        "start": 157.3,
+        "num": 0
     },
     {
         "id": 124,
@@ -1144,7 +1260,8 @@
         "parentId": 41,
         "color": "#D9F1F7",
         "end": 145,
-        "start": 152.1
+        "start": 152.1,
+        "num": 0
     },
     {
         "id": 123,
@@ -1154,7 +1271,8 @@
         "parentId": 40,
         "color": "#8CCD60",
         "end": 139.8,
-        "start": 145
+        "start": 145,
+        "num": 0
     },
     {
         "id": 122,
@@ -1164,7 +1282,8 @@
         "parentId": 40,
         "color": "#99D36A",
         "end": 132.9,
-        "start": 139.8
+        "start": 139.8,
+        "num": 0
     },
     {
         "id": 121,
@@ -1174,7 +1293,8 @@
         "parentId": 40,
         "color": "#A6D975",
         "end": 129.4,
-        "start": 132.9
+        "start": 132.9,
+        "num": 0
     },
     {
         "id": 120,
@@ -1184,7 +1304,8 @@
         "parentId": 40,
         "color": "#B3DF7F",
         "end": 125,
-        "start": 129.4
+        "start": 129.4,
+        "num": 0
     },
     {
         "id": 119,
@@ -1194,7 +1315,8 @@
         "parentId": 40,
         "color": "#BFE48A",
         "end": 113,
-        "start": 125
+        "start": 125,
+        "num": 0
     },
     {
         "id": 118,
@@ -1204,7 +1326,8 @@
         "parentId": 40,
         "color": "#CCEA97",
         "end": 100.5,
-        "start": 113
+        "start": 113,
+        "num": 0
     },
     {
         "id": 117,
@@ -1214,7 +1337,8 @@
         "parentId": 39,
         "color": "#B3DE53",
         "end": 93.9,
-        "start": 100.5
+        "start": 100.5,
+        "num": 0
     },
     {
         "id": 116,
@@ -1224,7 +1348,8 @@
         "parentId": 39,
         "color": "#BFE35D",
         "end": 89.8,
-        "start": 93.9
+        "start": 93.9,
+        "num": 0
     },
     {
         "id": 115,
@@ -1234,7 +1359,8 @@
         "parentId": 39,
         "color": "#CCE968",
         "end": 86.3,
-        "start": 89.8
+        "start": 89.8,
+        "num": 0
     },
     {
         "id": 114,
@@ -1244,7 +1370,8 @@
         "parentId": 39,
         "color": "#D9EF74",
         "end": 83.6,
-        "start": 86.3
+        "start": 86.3,
+        "num": 0
     },
     {
         "id": 113,
@@ -1254,7 +1381,8 @@
         "parentId": 39,
         "color": "#E6F47F",
         "end": 72.1,
-        "start": 83.6
+        "start": 83.6,
+        "num": 0
     },
     {
         "id": 112,
@@ -1264,7 +1392,8 @@
         "parentId": 39,
         "color": "#F2FA8C",
         "end": 66,
-        "start": 72.1
+        "start": 72.1,
+        "num": 0
     },
     {
         "id": 111,
@@ -1274,7 +1403,8 @@
         "parentId": 38,
         "color": "#FDB462",
         "end": 61.6,
-        "start": 66
+        "start": 66,
+        "num": 0
     },
     {
         "id": 743,
@@ -1284,7 +1414,8 @@
         "parentId": 38,
         "color": "#FEBF65",
         "end": 59.2,
-        "start": 61.6
+        "start": 61.6,
+        "num": 0
     },
     {
         "id": 110,
@@ -1294,7 +1425,8 @@
         "parentId": 38,
         "color": "#FDBF6F",
         "end": 56,
-        "start": 59.2
+        "start": 59.2,
+        "num": 0
     },
     {
         "id": 109,
@@ -1304,7 +1436,8 @@
         "parentId": 37,
         "color": "#FCA773",
         "end": 47.8,
-        "start": 56
+        "start": 56,
+        "num": 0
     },
     {
         "id": 108,
@@ -1314,7 +1447,8 @@
         "parentId": 37,
         "color": "#FCB482",
         "end": 41.3,
-        "start": 47.8
+        "start": 47.8,
+        "num": 0
     },
     {
         "id": 107,
@@ -1324,7 +1458,8 @@
         "parentId": 37,
         "color": "#FDC091",
         "end": 38,
-        "start": 41.3
+        "start": 41.3,
+        "num": 0
     },
     {
         "id": 106,
@@ -1334,7 +1469,8 @@
         "parentId": 37,
         "color": "#FDCDA1",
         "end": 33.9,
-        "start": 38
+        "start": 38,
+        "num": 0
     },
     {
         "id": 105,
@@ -1344,7 +1480,8 @@
         "parentId": 36,
         "color": "#FED99A",
         "end": 28.1,
-        "start": 33.9
+        "start": 33.9,
+        "num": 0
     },
     {
         "id": 104,
@@ -1354,7 +1491,8 @@
         "parentId": 36,
         "color": "#FEE6AA",
         "end": 23.03,
-        "start": 28.1
+        "start": 28.1,
+        "num": 0
     },
     {
         "id": 103,
@@ -1364,7 +1502,8 @@
         "parentId": 35,
         "color": "#FFFF33",
         "end": 20.44,
-        "start": 23.03
+        "start": 23.03,
+        "num": 0
     },
     {
         "id": 102,
@@ -1374,7 +1513,8 @@
         "parentId": 35,
         "color": "#FFFF41",
         "end": 15.97,
-        "start": 20.44
+        "start": 20.44,
+        "num": 0
     },
     {
         "id": 101,
@@ -1384,7 +1524,8 @@
         "parentId": 35,
         "color": "#FFFF4D",
         "end": 13.82,
-        "start": 15.97
+        "start": 15.97,
+        "num": 0
     },
     {
         "id": 100,
@@ -1394,7 +1535,8 @@
         "parentId": 35,
         "color": "#FFFF59",
         "end": 11.62,
-        "start": 13.82
+        "start": 13.82,
+        "num": 0
     },
     {
         "id": 99,
@@ -1404,7 +1546,8 @@
         "parentId": 35,
         "color": "#FFFF66",
         "end": 7.246,
-        "start": 11.62
+        "start": 11.62,
+        "num": 0
     },
     {
         "id": 98,
@@ -1414,7 +1557,8 @@
         "parentId": 35,
         "color": "#FFFF73",
         "end": 5.333,
-        "start": 7.246
+        "start": 7.246,
+        "num": 0
     },
     {
         "id": 97,
@@ -1424,7 +1568,8 @@
         "parentId": 34,
         "color": "#FFFFB3",
         "end": 3.6,
-        "start": 5.333
+        "start": 5.333,
+        "num": 0
     },
     {
         "id": 96,
@@ -1434,7 +1579,8 @@
         "parentId": 34,
         "color": "#FFFFBF",
         "end": 2.588,
-        "start": 3.6
+        "start": 3.6,
+        "num": 0
     },
     {
         "id": 741,
@@ -1444,7 +1590,8 @@
         "parentId": 33,
         "color": "#FFEDB3",
         "end": 1.806,
-        "start": 2.588
+        "start": 2.588,
+        "num": 0
     },
     {
         "id": 740,
@@ -1454,7 +1601,8 @@
         "parentId": 33,
         "color": "#FFF2BA",
         "end": 0.781,
-        "start": 1.806
+        "start": 1.806,
+        "num": 0
     },
     {
         "id": 923,
@@ -1464,7 +1612,8 @@
         "parentId": 33,
         "color": "#FFF2C7",
         "end": 0.126,
-        "start": 0.781
+        "start": 0.781,
+        "num": 0
     },
     {
         "id": 922,
@@ -1474,7 +1623,8 @@
         "parentId": 33,
         "color": "#FFF2D3",
         "end": 0.0117,
-        "start": 0.126
+        "start": 0.126,
+        "num": 0
     },
     {
         "id": 3002,
@@ -1484,7 +1634,8 @@
         "parentId": 32,
         "color": "#FEECDB",
         "end": 0.008,
-        "start": 0.0117
+        "start": 0.0117,
+        "num": 0
     },
     {
         "id": 3003,
@@ -1494,7 +1645,8 @@
         "parentId": 32,
         "color": "#FDECE4",
         "end": 0.004,
-        "start": 0.008
+        "start": 0.008,
+        "num": 0
     },
     {
         "id": 3004,
@@ -1504,6 +1656,7 @@
         "parentId": 32,
         "color": "#FDEDEC",
         "end": 0,
-        "start": 0.004
+        "start": 0.004,
+        "num": 0
     }
 ]

@@ -5,7 +5,7 @@ let timeWidth = $('#time').width(),
     clipTimeHeight = timeHeight - timeMargin.top - timeMargin.bottom,
     neighborWidth = 25,
     tickLength = 10,
-    font = '12px sans-serif',
+    font = '10px Sansation-Bold',
     hideSmallTicks = true;
 
 let timeSvg = d3.select('#time').append('svg')
@@ -58,23 +58,38 @@ function drawGeoTimeScale(data, g, svg, width, height, clipWidth, clipHeight, hi
             return `${sequence.join(' > ')}`;
         });
 
-    const text = cell.append('text')
+    const text = cell.append('g')
         .style('user-select', 'none')
-        .attr('pointer-events', 'none')
-        .attr('x', d => {
+        .style('pointer-events', 'none')
+        .style('fill', '#222')
+        .style('fill-opacity', labelVisible)
+        .style('text-anchor', 'middle')
+        .style('dominant-baseline', 'middle')
+        .style('transform', d => {
             const textx = (d.x1 - d.x0) / 2;
-            return Number.isNaN(textx) ? -1000 : textx;
+            const texty = (d.y1 - d.y0) / 3;
+            return `translate(${textx}px, ${texty}px)`;
         })
-        .attr('y', d => (d.y1 - d.y0) / 2)
-        .attr('fill', '#222')
-        .attr('fill-opacity', labelVisible)
-        .attr('text-anchor', 'middle')
-        .attr('dominant-baseline', 'middle')
-        .text(d => {
-            const rectWidth = d.x1 - d.x0;
-            const labelWidth = getTextWidth(d.data.name, font);
-            const abbrev = d.data.abr || d.data.name.charAt(0);
-            return rectWidth - 10 < labelWidth ? abbrev : d.data.name;
+        .call(g => {
+            g.append('text')
+                .attr('class', 'age')
+                .style('font-size', '12px')
+                .text(d => {
+                    const rectWidth = d.x1 - d.x0;
+                    const labelWidth = getTextWidth(d.data.name, font);
+                    const abbrev = d.data.abr || d.data.name.charAt(0);
+                    return rectWidth - 10 < labelWidth ? abbrev : d.data.name;
+                });
+
+            g.append('text')
+                .attr('class', 'num')
+                .style('font-size', '8px')
+                .attr('dy', d => (d.y1 - d.y0) / 3 + 2)
+                .text(d => {
+                    const rectWidth = d.x1 - d.x0;
+                    const labelWidth = getTextWidth(`${d.data.num} specimens`, '8px Sansation-Bold');
+                    return rectWidth - 20 < labelWidth ? '' : d.data.num === 0 ? '' : `${d.data.num} specimens`;
+                });
         });
 
     const ticksGroup = g
@@ -134,25 +149,35 @@ function drawGeoTimeScale(data, g, svg, width, height, clipWidth, clipHeight, hi
 
         text
             .transition(t)
-            .attr("fill-opacity", (d) =>
+            .style("fill-opacity", (d) =>
                 focusAncestors.includes(d) ? 1 : labelVisible(d.target)
             )
-            .attr("x", (d) => {
-                // Position all the ancestors labels in the middle
+            .style('transform', d => {
+                const texty = (d.y1 - d.y0) / 3;
                 if (focusAncestors.includes(d)) {
-                    return -d.target.x0 + width / 2;
+                    return `translate(${-d.target.x0 + width / 2}px, ${texty}px)`;
                 }
                 const rectWidth = d.target.x1 - d.target.x0;
-                const textX = rectWidth / 2;
+                const textx = rectWidth / 2;
 
-                return Number.isNaN(textX) ? width / 2 : textX;
+                return `translate(${textx}px, ${texty}px)`;
             })
-            .text((d) => {
-                const rectWidth = d.target.x1 - d.target.x0;
-                const labelWidth = getTextWidth(d.data.name, font);
-                const abbrev = d.data.abr || d.data.name.charAt(0);
+            .call(g => {
+                g.select('.age')
+                    .text(d => {
+                        const rectWidth = d.target.x1 - d.target.x0;
+                        const labelWidth = getTextWidth(d.data.name, font);
+                        const abbrev = d.data.abr || d.data.name.charAt(0);
+                        return rectWidth - 10 < labelWidth ? abbrev : d.data.name;
+                    });
 
-                return rectWidth - 8 < labelWidth ? abbrev : d.data.name;
+                g.select('.num')
+                    .attr('dy', d => (d.y1 - d.y0) / 3 + 2)
+                    .text(d => {
+                        const rectWidth = d.target.x1 - d.target.x0;
+                        const labelWidth = getTextWidth(`${d.data.num} specimens`, '8px Sansation-Bold');
+                        return rectWidth - 20 < labelWidth ? '' : d.data.num === 0 ? '' : `${d.data.num} specimens`;
+                    });
             });
 
         ticksGroup.call(g => drawTicks(g, makeTicksData(root, clipWidth), hideSmallTicks, width, margin));
