@@ -7,7 +7,8 @@ function filterByBrushToProject(data, selection, svg, map) {
 
 function filterByClickTreeToProject(data, age, node_g, map) {
     // https://stackoverflow.com/questions/35948669/how-to-check-if-a-value-exists-in-an-object-using-javascript/57944826
-    filterData = data.filter(d => Object.values(d).indexOf(age) > -1)
+    filterData = data.filter(d => Object.values(d).indexOf(age) > -1);
+    console.log(age, filterData)
     if (filterData.length === 0 || age === '') {
         console.log("No Data");
         return;

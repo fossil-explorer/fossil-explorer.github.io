@@ -1,5 +1,5 @@
 let dataList = [
-    d3.json('data/intervals@3.json', d3.autoType),
+    d3.json('data/intervals@3_1.json', d3.autoType),
     d3.csv('data/fossil8_20220213.csv', d3.autoType)
 ];
 

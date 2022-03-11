@@ -1,6 +1,6 @@
 let timeWidth = $('#time').width(),
     timeHeight = $('#time').height(),
-    timeMargin = {left: 2, top: 2, right: 2, bottom: 50},
+    timeMargin = {left: 2, top: 2, right: 2, bottom: 2},
     clipTimeWidth = timeWidth - timeMargin.left - timeMargin.right,
     clipTimeHeight = timeHeight - timeMargin.top - timeMargin.bottom,
     neighborWidth = 25,
@@ -92,12 +92,12 @@ function drawGeoTimeScale(data, g, svg, width, height, clipWidth, clipHeight, hi
                 });
         });
 
-    const ticksGroup = g
-        .append("g")
-        .attr("id", "ticks")
-        .attr("transform", `translate(0, ${clipHeight})`); // Move tick group down
-
-    ticksGroup.call(g => drawTicks(g, makeTicksData(root, clipWidth), hideSmallTicks, width, margin));
+    // const ticksGroup = g
+    //     .append("g")
+    //     .attr("id", "ticks")
+    //     .attr("transform", `translate(0, ${clipHeight})`); // Move tick group down
+    //
+    // ticksGroup.call(g => drawTicks(g, makeTicksData(root, clipWidth), hideSmallTicks, width, margin));
 
     svg.call(
         d3.zoom()
@@ -180,7 +180,7 @@ function drawGeoTimeScale(data, g, svg, width, height, clipWidth, clipHeight, hi
                     });
             });
 
-        ticksGroup.call(g => drawTicks(g, makeTicksData(root, clipWidth), hideSmallTicks, width, margin));
+        // ticksGroup.call(g => drawTicks(g, makeTicksData(root, clipWidth), hideSmallTicks, width, margin));
 
         filterByClickTreeToProject(fossilData, focus.data.name, node_g, map);
     }
