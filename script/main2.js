@@ -1,6 +1,6 @@
 let dataList = [
     d3.json('data/intervals@3_2.json', d3.autoType),
-    d3.csv('data/10wGPS.csv', d3.autoType)
+    d3.csv('data/20wGPS.csv', d3.autoType)
 ];
 
 $(function () {
