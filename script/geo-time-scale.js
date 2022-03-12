@@ -1,6 +1,6 @@
 let timeWidth = $('#time').width(),
     timeHeight = $('#time').height(),
-    timeMargin = {left: 2, top: 2, right: 2, bottom: 2},
+    timeMargin = {left: 2, top: 10, right: 2, bottom: 10},
     clipTimeWidth = timeWidth - timeMargin.left - timeMargin.right,
     clipTimeHeight = timeHeight - timeMargin.top - timeMargin.bottom,
     neighborWidth = 25,
