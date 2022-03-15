@@ -8,9 +8,9 @@ d3.select('#imageWindow .close')
     });
 
 let isPin = false;
-d3.select('body')
-    .on('keypress', function (event) {
-        if (event.keyCode === 32 && !isPin) {
+d3.select('#map')
+    .on('dblclick', function (event) {
+        if (!isPin) {
             isPin = true;
             mapboxSvg.on('mousemove', null);
         } else {
@@ -18,14 +18,6 @@ d3.select('body')
             mapboxSvg.on('mousemove', event => glyphMousemove(filterData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
             closeImage();
         }
-        // if (!isPin) {
-        //     isPin = true;
-        //     mapboxSvg.on('mousemove', null);
-        // } else {
-        //     isPin = false;
-        //     mapboxSvg.on('mousemove', event => glyphMousemove(filterData, glyph_g, sunburst_node_g, sunburst_label_g, event, 'map', map));
-        //     closeImage();
-        // }
     });
 
 let dragx = 0, dragy = 0;
@@ -44,10 +36,7 @@ d3.select('#imageWindow .drag')
                     dragx = event.sourceEvent.clientX;
                     dragy = event.sourceEvent.clientY;
 
-                // d3.select('#fsimg')
-                //     .style('z-index', 5000);
                 d3.select('#imageWindow')
-                //     .style('z-index', 5001)
                     .style('transform', `translate(${x - dx}px, ${y - dy}px)`);
             })
     );

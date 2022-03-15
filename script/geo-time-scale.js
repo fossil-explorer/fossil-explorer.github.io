@@ -1,12 +1,13 @@
 let timeWidth = $('#time').width(),
     timeHeight = $('#time').height(),
-    timeMargin = {left: 2, top: 10, right: 2, bottom: 10},
+    timeMargin = {left: 2, top: 0, right: 2, bottom: 30},
     clipTimeWidth = timeWidth - timeMargin.left - timeMargin.right,
     clipTimeHeight = timeHeight - timeMargin.top - timeMargin.bottom,
     neighborWidth = 25,
     tickLength = 10,
     font = '10px Sansation-Bold',
-    hideSmallTicks = true;
+    hideSmallTicks = true,
+    hideTicksDepth = [4];
 
 let timeSvg = d3.select('#time').append('svg')
     .attr('width', timeWidth)
@@ -92,16 +93,15 @@ function drawGeoTimeScale(data, g, svg, width, height, clipWidth, clipHeight, hi
                 });
         });
 
-    // const ticksGroup = g
-    //     .append("g")
-    //     .attr("id", "ticks")
-    //     .attr("transform", `translate(0, ${clipHeight})`); // Move tick group down
-    //
-    // ticksGroup.call(g => drawTicks(g, makeTicksData(root, clipWidth), hideSmallTicks, width, margin));
+    const ticksGroup = g
+        .append("g")
+        .attr("id", "ticks")
+        .attr("transform", `translate(0, ${clipHeight})`); // Move tick group down
+    ticksGroup.call((g) => drawTicks(g, makeTicksData(root), hideSmallTicks, clipWidth, margin));
 
     svg.call(
         d3.zoom()
-            .extent([[0, 0], [width, height]])
+            .extent([[0, 0], [clipWidth, clipHeight]])
             .scaleExtent([1, 8])
             .on('zoom', zoomed)
             .on('end', () => {
@@ -180,7 +180,7 @@ function drawGeoTimeScale(data, g, svg, width, height, clipWidth, clipHeight, hi
                     });
             });
 
-        // ticksGroup.call(g => drawTicks(g, makeTicksData(root, clipWidth), hideSmallTicks, width, margin));
+        ticksGroup.call(g => drawTicks(g, makeTicksData(root, clipWidth), hideSmallTicks, width, margin, t));
 
         filterByClickTreeToProject(fossilData, focus.data.name, node_g, map);
     }
@@ -195,11 +195,11 @@ function drawGeoTimeScale(data, g, svg, width, height, clipWidth, clipHeight, hi
         if (translateX + root.target.x0 > 0 || root.x1 - translateX > root.target.x1) return;
 
         rect.attr("cursor", "grabbing");
-        g.attr("transform", `translate(${translateX},0)`);
+        g.attr("transform", `translate(${translateX}, 0)`);
     }
 }
 
-function drawTicks(g, data, hideSmallTicks, t, width, margin) {
+function drawTicks(g, data, hideSmallTicks, width, margin, t) {
     g
         .selectAll("g")
         .data(data)
@@ -212,7 +212,7 @@ function drawTicks(g, data, hideSmallTicks, t, width, margin) {
                         d.x === 0 ? "start" : d.x === width ? "end" : "middle"
                     )
                     .attr("opacity", (d) =>
-                        [4, 5].includes(d.depth) && hideSmallTicks ? 0 : 1
+                        hideTicksDepth.includes(d.depth) && hideSmallTicks ? 0 : 1
                     );
 
                 tick
@@ -222,14 +222,14 @@ function drawTicks(g, data, hideSmallTicks, t, width, margin) {
                     .attr("x1", 0)
                     .attr("y1", 2)
                     .attr("x2", 0)
-                    .attr("y2", (d) => 35 - d.depth * tickLength);
+                    .attr("y2", tickLength);
 
                 tick
                     .append("text")
                     .attr("x", 0)
-                    .attr("y", (d) => 35 - d.depth * tickLength + 4)
+                    .attr("y", tickLength + 4)
                     .attr("dominant-baseline", "hanging")
-                    .attr("font-size", (d) => `${1 - 0.05 * d.depth}em`)
+                    .attr("font-size", '8px')
                     .text((d) => d.text)
                     .clone(true)
                     .lower()
@@ -241,13 +241,14 @@ function drawTicks(g, data, hideSmallTicks, t, width, margin) {
                 update
                     .transition(t)
                     .attr("opacity", (d) =>
-                        [4, 5].includes(d.depth) && hideSmallTicks ? 0 : 1
+                        hideTicksDepth.includes(d.depth) && hideSmallTicks ? 0 : 1
                     )
                     .attr("transform", (d) => `translate(${d.targetX}, 0)`)
                     .attr("dominant-baseline", "hanging")
                     .attr("text-anchor", (d) =>
                         d.targetX === 0 ? "start" : d.targetX === width ? "end" : "middle"
-                    )
+                    ),
+            exit => exit.remove()
         )
 }
 
