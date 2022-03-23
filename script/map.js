@@ -1,22 +1,21 @@
 let map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v10',
-    style: {
-        version: 8,
-        sources: {
-
-        },
-        layers: [
-          {
-            id: 'background',
-            type: 'background',
-            paint: {
-              'background-color': 'white'
-            }
-          }
-        ]
-
-      },
+    // style: {
+    //     version: 8,
+    //     sources: {
+    //
+    //     },
+    //     layers: [
+    //       {
+    //         id: 'background',
+    //         type: 'background',
+    //         paint: {
+    //           'background-color': 'white'
+    //         }
+    //       }
+    //     ]
+    //   },
     center: [97.57214200492949, 33.89186708166135],
     pitch: 0, // pitch in degrees
     bearing: 0, // bearing in degrees
